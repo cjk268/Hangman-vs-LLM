@@ -37,7 +37,7 @@ Specify the file path, and indicate the number of human players.
 
 ## Example usage
 1. Example usage without GPT4ALL:
-...
+```
 from hangman import Hangman, Player
 import random
 alphabet_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -51,10 +51,10 @@ hangman = Hangman(players=[
   Player(name="Random Guess Generator", is_human=False, guess_generator=random_guess_generator, initial_lives=20)
 ])
 hangman.start_game()
-...
+```
 
 2. Example usage with GPT4ALL LLM
-...
+```
 from hangman import Hangman, Player
 from gpt4all import GPT4All
 # Enter your gpt4all local path, in testing nous-hermes-llama2-13b.Q4_0 works better than mistral-7b-openorca.Q4_0, 
@@ -86,7 +86,7 @@ Player(name="YOUR NAME", is_human=True, initial_lives=20),
 Player(name="Nous", is_human=False, guess_generator=nous_hermes_guess, initial_lives=20)
 ])
 hangman.start_game()
-...
+```
 
 ## File Structure
 The project follows a simple file structure:
